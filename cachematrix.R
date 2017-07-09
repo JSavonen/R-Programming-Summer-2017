@@ -1,7 +1,9 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## makeCacheMatrix sets up a matrix and saves it in a cache to be used later in future computions.
+## Basicly, the x is equal to matric and then the function sets the matrix as a matrix value for the x
+## Then the x can be used as a matrix to be used in different matrix computions. So the function saves basicly a matrix for future use by caching it into the memory.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -15,7 +17,9 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
-## Write a short comment describing this function
+## CacheSolve uses the saved matrix as the input and calculates the inverse for the saved or cached matrix if it is inversible matrix,
+## Thus, there will warning message "getting cached data" if the matrix set by makeCacheMatrix has not been inversible.
+## Thus, the function uses the cached matrix as input and returns the inverse of the cached matrix.
 
 cacheSolve <- function(x, ...){
           ## Return a matrix that is the inverse of 'x'
